@@ -1,0 +1,141 @@
+﻿body,
+html {
+  background: #f5f6f7;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.timeline {
+  position: absolute;
+  margin-top: 20px;
+  left: calc(50% - 325px);
+}
+.timeline .left .entry {
+  left: 0;
+}
+.timeline .left .entry header:after {
+  left: 295px;
+}
+.timeline .left .entry.hidden {
+  margin-left: -50px;
+}
+.timeline .right .entry {
+  left: 350px;
+}
+.timeline .right .entry header:after {
+  left: -5px;
+}
+.timeline .right .entry.hidden {
+  margin-left: 50px;
+}
+.timeline .entry {
+  margin-top: 30px;
+  background: #fff;
+  width: 300px;
+  position: absolute;
+  -webkit-transition: opacity 1s, margin-left 1s;
+  -moz-transition: opacity 1s, margin-left 1s;
+  -o-transition: opacity 1s, margin-left 1s;
+  -ms-transition: opacity 1s, margin-left 1s;
+  transition: opacity 1s, margin-left 1s;
+}
+.timeline .entry.hidden {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  margin-left: 0;
+}
+.timeline .entry header {
+  margin-top: -30px;
+  background: #145c5f;
+  height: 30px;
+  color: white;
+  text-align:center;
+  font-weight:bold;
+}
+.timeline .entry header:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #145c5f;
+  display: block;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -20px;
+  position: absolute;
+}
+.timeline .line {
+  width: 50px;
+  position: absolute;
+  left: 300px;
+}
+.timeline .line .year {
+  position: fixed;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: #145c5f;
+  line-height: 30px;
+  text-align: center;
+  z-index: 2;
+  -webkit-transition: box-shadow 0.4s, width 0.2s, height 0.2s, line-height 0.2s, font-size 0.2s;
+  -moz-transition: box-shadow 0.4s, width 0.2s, height 0.2s, line-height 0.2s, font-size 0.2s;
+  -o-transition: box-shadow 0.4s, width 0.2s, height 0.2s, line-height 0.2s, font-size 0.2s;
+  -ms-transition: box-shadow 0.4s, width 0.2s, height 0.2s, line-height 0.2s, font-size 0.2s;
+  transition: box-shadow 0.4s, width 0.2s, height 0.2s, line-height 0.2s, font-size 0.2s;
+  -webkit-box-shadow: 0 0 0 0 rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7, 0 -10px 0 0 #f5f6f7;
+  box-shadow: 0 0 0 0 rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7, 0 -10px 0 0 #f5f6f7;
+  margin: -5px 0 0 25px;
+}
+.timeline .line .year.hit {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  -webkit-box-shadow: 0 0 0 3px rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7, 0 -10px 0 0 #f5f6f7;
+  box-shadow: 0 0 0 3px rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7, 0 -10px 0 0 #f5f6f7;
+}
+.timeline .line .vertical {
+  margin: 0 auto;
+  height: 100%;
+  background: #145c5f;
+  width: 2px;
+}
+.timeline .line .dot {
+  -webkit-transition: box-shadow 1s, width 0.5s, height 0.5s;
+  -moz-transition: box-shadow 1s, width 0.5s, height 0.5s;
+  -o-transition: box-shadow 1s, width 0.5s, height 0.5s;
+  -ms-transition: box-shadow 1s, width 0.5s, height 0.5s;
+  transition: box-shadow 1s, width 0.5s, height 0.5s;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 15px;
+  margin-left: 1px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: #145c5f;
+  position: absolute;
+  -webkit-box-shadow: 0 0 0 5px rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7;
+  box-shadow: 0 0 0 5px rgba(20,92,95,0.15), 0 0 0 3px #f5f6f7;
+}
+.timeline .line .dot.hidden {
+  -webkit-box-shadow: 0 0 0 0 rgba(20,92,95,0.15), 0 0 0 0px #f5f6f7;
+  box-shadow: 0 0 0 0 rgba(20,92,95,0.15), 0 0 0 0px #f5f6f7;
+  width: 0;
+  height: 0;
+}
